@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws02_topic/devel
+
+Name: turtle_bkgcolor_set
+Description: Description of turtle_bkgcolor_set
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/gwq/gwq/rospy_ws02_topic/devel/setup.sh

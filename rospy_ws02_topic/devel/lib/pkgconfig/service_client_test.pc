@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws02_topic/devel
+
+Name: service_client_test
+Description: Description of service_client_test
+Version: 0.0.0
+Cflags: -I/home/gwq/gwq/rospy_ws02_topic/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

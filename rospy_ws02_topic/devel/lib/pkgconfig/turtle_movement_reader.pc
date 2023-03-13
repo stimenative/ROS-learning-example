@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws02_topic/devel
+
+Name: turtle_movement_reader
+Description: Description of turtle_movement_reader
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
