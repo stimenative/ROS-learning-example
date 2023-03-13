@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws01/devel
+
+Name: turtle_test
+Description: Description of turtle_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
