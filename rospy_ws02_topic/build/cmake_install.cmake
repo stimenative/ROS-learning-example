@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/gwq/gwq/rospy_ws02_topic/build/gtest/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/coum_meta/cmake_install.cmake")
+  include("/home/gwq/gwq/rospy_ws02_topic/build/import_test/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/param_service/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/service_client_test/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/time_test/cmake_install.cmake")

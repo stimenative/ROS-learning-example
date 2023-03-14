@@ -1,2 +1,2 @@
-coum_meta:param_service:service_client_test:time_test:topic_DIYmsg:topic_comu:turtle_bkgcolor_set:turtle_controler:turtle_generate:turtle_movement_reader
+coum_meta:import_test:param_service:service_client_test:time_test:topic_DIYmsg:topic_comu:turtle_bkgcolor_set:turtle_controler:turtle_generate:turtle_movement_reader
 -DCATKIN_DEVEL_PREFIX=/home/gwq/gwq/rospy_ws02_topic/devel -DCMAKE_INSTALL_PREFIX=/home/gwq/gwq/rospy_ws02_topic/install -G Unix Makefiles

@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("coum_meta")
+subdirs("import_test")
 subdirs("param_service")
 subdirs("service_client_test")
 subdirs("time_test")
