@@ -57,6 +57,7 @@ all: gtest/all
 all: coum_meta/all
 all: param_service/all
 all: service_client_test/all
+all: time_test/all
 all: topic_DIYmsg/all
 all: topic_comu/all
 all: turtle_bkgcolor_set/all
@@ -71,6 +72,7 @@ preinstall: gtest/preinstall
 preinstall: coum_meta/preinstall
 preinstall: param_service/preinstall
 preinstall: service_client_test/preinstall
+preinstall: time_test/preinstall
 preinstall: topic_DIYmsg/preinstall
 preinstall: topic_comu/preinstall
 preinstall: turtle_bkgcolor_set/preinstall
@@ -90,6 +92,7 @@ clean: gtest/clean
 clean: coum_meta/clean
 clean: param_service/clean
 clean: service_client_test/clean
+clean: time_test/clean
 clean: topic_DIYmsg/clean
 clean: topic_comu/clean
 clean: turtle_bkgcolor_set/clean
@@ -234,6 +237,24 @@ service_client_test/clean: service_client_test/CMakeFiles/service_client_test_ge
 service_client_test/clean: service_client_test/CMakeFiles/service_client_test_generate_messages_py.dir/clean
 
 .PHONY : service_client_test/clean
+
+#=============================================================================
+# Directory level rules for directory time_test
+
+# Recursive "all" directory target.
+time_test/all:
+
+.PHONY : time_test/all
+
+# Recursive "preinstall" directory target.
+time_test/preinstall:
+
+.PHONY : time_test/preinstall
+
+# Recursive "clean" directory target.
+time_test/clean:
+
+.PHONY : time_test/clean
 
 #=============================================================================
 # Directory level rules for directory topic_DIYmsg
