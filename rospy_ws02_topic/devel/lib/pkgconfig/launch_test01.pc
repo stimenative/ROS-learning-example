@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws02_topic/devel
+
+Name: launch_test01
+Description: Description of launch_test01
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

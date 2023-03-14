@@ -1,0 +1,5 @@
+<launch deprecated="warning:outdate">
+    <node pkg="turtlesim" type="turtlesim_node" name="firstTurtle" output="screen" />
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="firstTurtleControl" output="screen" />
+</launch>

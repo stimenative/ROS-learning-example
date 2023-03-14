@@ -140,6 +140,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gwq/gwq/rospy_ws02_topic/build/topic_comu/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/turtle_bkgcolor_set/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/turtle_controler/cmake_install.cmake")
+  include("/home/gwq/gwq/rospy_ws02_topic/build/launch_test01/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/turtle_generate/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws02_topic/build/turtle_movement_reader/cmake_install.cmake")
 

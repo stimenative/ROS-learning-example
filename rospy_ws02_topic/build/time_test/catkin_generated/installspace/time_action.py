@@ -39,10 +39,11 @@ durDura02 = rightnow02.to_sec() - rightnow.to_sec()
 rospy.loginfo(durDura.to_sec())
 rospy.loginfo(durDura02)
 
-# 定时器
-def doTime(event):
-    rospy.loginfo("00000")
-    rospy.loginfo("当前时间为：%s",str(event.current_real))
+if __name__ == "__main__":
+    # 定时器
+    def doTime(event):
+        rospy.loginfo("00000")
+        rospy.loginfo("当前时间为：%s",str(event.current_real))
 
-rospy.Timer(rospy.Duration(2),doTime)
-rospy.spin()
+    rospy.Timer(rospy.Duration(2),doTime)
+    rospy.spin()
