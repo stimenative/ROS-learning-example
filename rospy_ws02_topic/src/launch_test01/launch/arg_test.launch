@@ -1,0 +1,9 @@
+<launch>
+    <arg name="data01" default="2.0" />
+
+    <param name="a" value="$(arg data01)" />
+    <param name="b" value="$(arg data01)" />
+    <param name="c" value="$(arg data01)" />
+
+</launch>
+<!-- run: roslaunch launch_test01 arg_test.launch data01:= value -->
