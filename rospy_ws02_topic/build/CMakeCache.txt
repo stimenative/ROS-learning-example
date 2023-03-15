@@ -552,6 +552,12 @@ topic_comu_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/topic_comu
 topic_comu_SOURCE_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/src/topic_comu
 
 //Value Computed by CMake
+topic_diymsg_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/topic_diymsg
+
+//Value Computed by CMake
+topic_diymsg_SOURCE_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/src/topic_diymsg
+
+//Value Computed by CMake
 turtle_bkgcolor_set_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/turtle_bkgcolor_set
 
 //Value Computed by CMake

@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws02_topic/devel
+
+Name: topic_diymsg
+Description: Description of topic_diymsg
+Version: 0.0.0
+Cflags: -I/home/gwq/gwq/rospy_ws02_topic/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

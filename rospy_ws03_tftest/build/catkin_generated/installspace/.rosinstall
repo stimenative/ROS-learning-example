@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/gwq/gwq/rospy_ws03_tftest/install/setup.sh

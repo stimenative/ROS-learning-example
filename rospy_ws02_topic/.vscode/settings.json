@@ -7,5 +7,5 @@
         "/opt/ros/noetic/lib/python3/dist-packages",
         "/home/gwq/gwq/rospy_ws02_topic/devel/lib/python3/dist-packages"
     ],
-    "cmake.sourceDirectory": "${workspaceFolder}/src/topic_DIYmsg"
+    "cmake.sourceDirectory": "${workspaceFolder}/src/topic_diymsg"
 }
