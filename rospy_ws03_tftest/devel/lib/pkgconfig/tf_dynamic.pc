@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws03_tftest/devel
+
+Name: tf_dynamic
+Description: Description of tf_dynamic
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

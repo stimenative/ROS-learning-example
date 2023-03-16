@@ -56,3 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tf_test" TYPE PROGRAM FILES "/home/gwq/gwq/rospy_ws03_tftest/build/tf_test/catkin_generated/installspace/static_pub.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/tf_test" TYPE PROGRAM FILES "/home/gwq/gwq/rospy_ws03_tftest/build/tf_test/catkin_generated/installspace/static_sub.py")
+endif()
+

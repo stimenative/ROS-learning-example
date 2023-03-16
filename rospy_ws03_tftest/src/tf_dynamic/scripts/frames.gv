@@ -1,0 +1,7 @@
+digraph G {
+"base" -> "turtle1"[label=" Broadcaster: /dynamic_pub\nAverage rate: 62.739\nBuffer length: 5.005\nMost recent transform: 1678962423.223\nOldest transform: 1678962418.219\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1678962423.2307124"[ shape=plaintext ] ;
+}->"base";
+}

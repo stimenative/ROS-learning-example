@@ -22,8 +22,8 @@ if __name__ == "__main__":
     tfs.child_frame_id = "radar"    # 子坐标ID
     
     # 坐标偏移量
-    tfs.transform.translation.x = 0.3
-    tfs.transform.translation.y = 0.4
+    tfs.transform.translation.x = 0.2
+    tfs.transform.translation.y = 0.0
     tfs.transform.translation.z = 0.5
 
     # 四元数

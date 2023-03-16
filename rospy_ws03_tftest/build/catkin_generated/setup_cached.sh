@@ -7,9 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/gwq/gwq/rospy_ws03_tftest/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/gwq/gwq/rospy_ws03_tftest/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/gwq/gwq/rospy_ws03_tftest/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH='/home/gwq/gwq/rospy_ws02_topic/devel/lib:/home/gwq/gwq/rospy_ws01/devel/lib:/opt/ros/noetic/lib'
+export PKG_CONFIG_PATH='/home/gwq/gwq/rospy_ws02_topic/devel/lib/pkgconfig:/home/gwq/gwq/rospy_ws01/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
 export PWD='/home/gwq/gwq/rospy_ws03_tftest/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/gwq/gwq/rospy_ws03_tftest/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/gwq/gwq/rospy_ws03_tftest/src:$ROS_PACKAGE_PATH"
