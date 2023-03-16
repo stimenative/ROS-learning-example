@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="radar" args="0.2 0.8 0.3 0 0 0 /base /radar" output="screen"/>
+    <!--node pkg="tf2_ros" type="static_transform_publisher" name="coord02" args="0.5 0.0 0.0 0 0 0 /base /coord02" output="screen"/-->
+    <node pkg="tf_test" type="static_sub.py" name="base" output="screen" />
+</launch>

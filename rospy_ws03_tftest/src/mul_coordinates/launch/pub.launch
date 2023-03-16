@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="coord01" args="0.2 0.8 0.3 0 0 0 /base /coord01" output="screen"/>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="coord02" args="0.5 0.0 0.0 0 0 0 /base /coord02" output="screen"/>
+    <node pkg="mul_coordinates" type="mul_coord_sub.py" name="coord_sub" output="screen" />
+</launch>
+<!--rosrun tf2_ros static_transform_publisher x偏移量 y偏移量 z偏移量 z偏航角度 y俯仰角度 x翻滚角度 父级坐标系 子级坐标系-->
