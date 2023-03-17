@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key" output="screen" />
+    <node pkg="turtle_follow" type="turtle_create.py" name="turtle_create" output="screen" />
+    <node pkg="turtle_follow" type="turtle_coord_set.py" name="turtle_coo1" args="turtle1" output="screen" />
+    <node pkg="turtle_follow" type="turtle_coord_set.py" name="turtle_coo2" args="turtle2" output="screen" />
+    <node pkg="turtle_follow" type="turtle_follow_controler.py" name="controler" output="screen" />
+</launch>
