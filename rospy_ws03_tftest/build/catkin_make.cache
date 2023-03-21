@@ -1,2 +1,2 @@
-tf_dynamic:tf_test
+mul_coordinates:tf_dynamic:tf_test:turtle_follow
 -DCATKIN_DEVEL_PREFIX=/home/gwq/gwq/rospy_ws03_tftest/devel -DCMAKE_INSTALL_PREFIX=/home/gwq/gwq/rospy_ws03_tftest/install -G Unix Makefiles

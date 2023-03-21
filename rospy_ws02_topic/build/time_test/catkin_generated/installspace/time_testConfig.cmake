@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/gwq/gwq/rospy_ws02_topic/install/lib;/home/gwq/gwq/rospy_ws02_topic/devel/lib;/home/gwq/gwq/rospy_ws01/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/gwq/gwq/rospy_ws02_topic/install/lib;/home/gwq/gwq/rospy_ws03_tftest/devel/lib;/home/gwq/gwq/rospy_ws02_topic/devel/lib;/home/gwq/gwq/rospy_ws01/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

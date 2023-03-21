@@ -540,12 +540,6 @@ time_test_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/time_test
 time_test_SOURCE_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/src/time_test
 
 //Value Computed by CMake
-topic_DIYmsg_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/topic_DIYmsg
-
-//Value Computed by CMake
-topic_DIYmsg_SOURCE_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/src/topic_DIYmsg
-
-//Value Computed by CMake
 topic_comu_BINARY_DIR:STATIC=/home/gwq/gwq/rospy_ws02_topic/build/topic_comu
 
 //Value Computed by CMake

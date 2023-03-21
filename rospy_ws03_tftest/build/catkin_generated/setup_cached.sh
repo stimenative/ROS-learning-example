@@ -7,6 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/gwq/gwq/rospy_ws02_topic/devel/lib:/home/gwq/gwq/rospy_ws01/devel/lib:/opt/ros/noetic/lib'
-export PKG_CONFIG_PATH='/home/gwq/gwq/rospy_ws02_topic/devel/lib/pkgconfig:/home/gwq/gwq/rospy_ws01/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
 export PWD='/home/gwq/gwq/rospy_ws03_tftest/build'

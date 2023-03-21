@@ -14,10 +14,10 @@ if __name__ == "__main__":
         point_source.header.frame_id = "turtle1"
         point_source.header.stamp = rospy.Time.now()
         
-        # 相对于turtle的座标点
-        point_source.point.x = 10 
-        point_source.point.y = 10 
-        point_source.point.z = 10 
+        # 相对于turtle的坐标点
+        point_source.point.x = 0.0 
+        point_source.point.y = 0.0 
+        point_source.point.z = 0.0 
 
         try:
             point_target = buffer.transform(point_source,"base",rospy.Duration(1))

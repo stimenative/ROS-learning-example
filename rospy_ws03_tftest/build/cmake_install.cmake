@@ -132,7 +132,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/gwq/gwq/rospy_ws03_tftest/build/gtest/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws03_tftest/build/tf_test/cmake_install.cmake")
+  include("/home/gwq/gwq/rospy_ws03_tftest/build/mul_coordinates/cmake_install.cmake")
   include("/home/gwq/gwq/rospy_ws03_tftest/build/tf_dynamic/cmake_install.cmake")
+  include("/home/gwq/gwq/rospy_ws03_tftest/build/turtle_follow/cmake_install.cmake")
 
 endif()
 

@@ -1,0 +1,8 @@
+prefix=/home/gwq/gwq/rospy_ws03_tftest/install
+
+Name: mul_coordinates
+Description: Description of mul_coordinates
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
