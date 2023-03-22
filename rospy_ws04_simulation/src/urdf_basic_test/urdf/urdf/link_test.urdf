@@ -1,0 +1,26 @@
+<robot name="mycar02">
+    <link name="base_link">
+        <visual>
+            <!-- shape -->
+            <geometry>
+
+                <!-- 立方体 长宽高 -->
+                <!-- <box size="1 2 3" /> -->
+                <!-- 圆柱 半径 长度 -->
+                <!-- <cylinder radius="0.5" length="0.1" /> -->               
+                <!-- 球体 半径 -->
+                <!-- <sphere radius="0.5" /> -->               
+                <!-- 皮肤 -->
+                <mesh filename="package://urdf_basic_test/meshes/autolabor_mini.stl"/>               
+                <!-- 只能同时应用一个标签 -->
+                
+            </geometry>
+            <!-- 坐标偏移及姿态角 -->
+            <origin xyz="0 0 0" rpy="0 0 1.57" />
+            <!-- 颜色 -->
+            <material name="black">
+                <color rgba="0.7 0.5 0.5 0.5" />
+            </material>
+        </visual>
+    </link>
+</robot>
