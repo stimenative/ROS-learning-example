@@ -1,0 +1,92 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mycar">
+    <!-- 参数定义 -->
+    <!-- <xacro:property name="pi" value="3.1415927" /> -->
+    <xacro:property name="footprint_radius" value="0.001" />
+    <xacro:property name="base_link_r" value="0.1" />
+    <xacro:property name="base_link_l" value="0.08" />
+    <xacro:property name="base2ground_hight" value="0.015" />
+    <xacro:property name="base_link_z" value="${base2ground_hight + base_link_l / 2 }" />
+
+    <!-- 设置原点 -->
+    <link name="base_footprint">
+        <visual>
+            <geometry>
+                <sphere radius="${footprint_radius}" />
+            </geometry>
+        </visual>
+    </link>
+
+    <!-- 底盘 -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder radius="${base_link_r}" length="${base_link_l}"/> 
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="blue">
+                <color rgba="0 0 1.0 0.5" />
+            </material>
+        </visual>
+    </link>
+
+    <!-- 原点与底盘连接 -->
+    <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 ${base_link_z}" />
+    </joint>
+
+    <!-- 驱动轮 -->
+    <xacro:property name="move_wheel_r" value="0.0325"/>
+    <xacro:property name="move_wheel_l" value="0.015"/>
+    <!-- 宏定义 -->
+    <xacro:macro name="addMoveWheel" params="name flag">
+        <link name="${name}_MoveWheel">
+            <visual>
+                <geometry>
+                    <cylinder radius="${move_wheel_r}" length="${move_wheel_l}"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.0" rpy="${pi / 2} 0.0 0.0"/>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 1.0"/>
+                </material>
+            </visual>
+        </link>
+
+        <joint name="${name}_MoveWheel2base_link" type="continuous">
+            <parent link="base_link"/>
+            <child link="${name}_MoveWheel"/>
+            <origin xyz="0 ${flag * base_link_r} ${-(base_link_z - move_wheel_r)}"/>
+            <axis xyz="0 1 0"/>
+        </joint>
+    </xacro:macro>
+
+    <xacro:addMoveWheel name="left" flag="1"/>
+    <xacro:addMoveWheel name="right" flag="-1"/>
+
+    <!-- 支撑轮 -->
+    <xacro:property name="support_wheel_r" value="0.01"/>
+
+    <xacro:macro name="addSupportWheel" params="name flag">
+        <link name="${name}_SupportWheel">
+            <visual>
+                <geometry>
+                    <sphere radius="${support_wheel_r}"/>
+                </geometry>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <material name="black">
+                    <color rgba="0.0 0.0 0.0 1.0"/>
+                </material>
+            </visual>
+        </link>
+
+        <joint name="${name}_SupportWheel2base_link" type="continuous">
+            <parent link="base_link"/>
+            <child link="${name}_SupportWheel"/>
+            <origin xyz="${flag * (base_link_r - support_wheel_r)} 0.0 ${-(base_link_z - support_wheel_r)}"/>
+            <axis xyz="1 1 1"/>
+        </joint>
+    </xacro:macro>
+    <xacro:addSupportWheel name="front" flag="1" />
+    <xacro:addSupportWheel name="back" flag="-1" />
+</robot>
