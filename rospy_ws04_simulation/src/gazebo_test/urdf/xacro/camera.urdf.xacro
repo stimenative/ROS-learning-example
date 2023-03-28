@@ -1,0 +1,36 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_camera">
+    <xacro:property name="camera_l" value="0.01" />
+    <xacro:property name="camera_w" value="0.025" />
+    <xacro:property name="camera_h" value="0.025" />
+    <xacro:property name="camera_x" value="0.08" />
+    <xacro:property name="camera_y" value="0.0" />
+    <xacro:property name="camera_z" value="${base_link_l / 2 + camera_h / 2}" />
+    <xacro:property name="camera_m" value="0.01" />
+
+
+    <!-- 摄像头 -->
+    <link name="camera">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${camera_l} ${camera_w} ${camera_h}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="${camera_l} ${camera_w} ${camera_h}"/>
+            </geometry>            
+        </collision>
+        <xacro:Box_inertial_matrix m="${camera_m}" l="${camera_l}" w="${camera_w}" h="${camera_h}" />
+    </link>
+    <joint name="camera2base_link" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera"/>
+        <origin xyz="${camera_x} ${camera_y} ${camera_z}"/>
+    </joint>
+    <gazebo reference="camera">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+</robot>

@@ -1,0 +1,6 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="combation">
+    <xacro:include filename="gavity_mat.urdf.xacro"/>
+    <xacro:include filename="base.urdf.xacro"/>
+    <xacro:include filename="camera.urdf.xacro"/>
+    <xacro:include filename="ladar.urdf.xacro"/>
+</robot>

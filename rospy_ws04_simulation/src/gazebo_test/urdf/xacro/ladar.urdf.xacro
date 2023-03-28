@@ -1,0 +1,75 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_ladar">
+    <!-- 支架 -->
+    <xacro:property name="support_l" value="0.15" />
+    <xacro:property name="support_r" value="0.01" />
+    <xacro:property name="support_x" value="0.0" />
+    <xacro:property name="support_y" value="0.0" />
+    <xacro:property name="support_z" value="${base_link_l / 2 + support_l / 2}" />
+
+    <xacro:property name="support_m" value="0.02" />
+
+    <link name="support">
+        <visual>
+            <geometry>
+                <cylinder radius="${support_r}" length="${support_l}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="red">
+                <color rgba="0.8 0.2 0.0 0.8"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${support_r}" length="${support_l}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>            
+        </collision>
+    </link>
+
+    <xacro:cylinder_inertial_matrix m="${support_m}" r="${support_r}" h="${support_l}" />
+
+    <joint name="support2base_link" type="fixed">
+        <parent link="base_link"/>
+        <child link="support"/>
+        <origin xyz="${support_x} ${support_y} ${support_z}"/>
+    </joint>
+
+    <gazebo reference="support">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <!-- 雷达 -->
+    <xacro:property name="ladar_l" value="0.05" />
+    <xacro:property name="ladar_r" value="0.03" />
+    <xacro:property name="ladar_x" value="0.0" />
+    <xacro:property name="ladar_y" value="0.0" />
+    <xacro:property name="ladar_z" value="${support_l / 2 + ladar_l / 2}" />
+    
+    <xacro:property name="ladar_m" value="0.1" />
+
+
+    <link name="ladar">
+        <visual>
+            <geometry>
+                <cylinder radius="${ladar_r}" length="${ladar_l}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${ladar_r}" length="${ladar_l}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+    </link>
+    <xacro:cylinder_inertial_matrix m="${ladar_m}" r="${ladar_r}" h="${ladar_l}" />
+    <joint name="ladar2support" type="fixed">
+        <parent link="support"/>
+        <child link="ladar"/>
+        <origin xyz="${ladar_x} ${ladar_y} ${ladar_z}"/>
+    </joint>
+    <gazebo reference="ladar">
+        <material>Gazebo/Black</material>
+    </gazebo>
+</robot>
