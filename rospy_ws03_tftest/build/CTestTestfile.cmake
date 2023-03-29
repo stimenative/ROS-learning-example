@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("ros_bag_test")
 subdirs("tf_test")
 subdirs("mul_coordinates")
 subdirs("tf_dynamic")

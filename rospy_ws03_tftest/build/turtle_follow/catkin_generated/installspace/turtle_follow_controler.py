@@ -24,4 +24,4 @@ if __name__ == "__main__":
             pub.publish(twist_info)
 
         except Exception as e:
-            rospy.logwarn("%e",e)
+            rospy.logwarn("%s",e)
