@@ -81,9 +81,7 @@
         </link>
 
         <gazebo reference="${name}_MoveWheel">
-            <material>
-                Gazebo/Red
-            </material>
+            <material>Gazebo/Red</material>
         </gazebo>
 
         <joint name="${name}_MoveWheel2base_link" type="continuous">
@@ -120,9 +118,7 @@
         </link>
 
         <gazebo reference="${name}_SupportWheel">
-            <material>
-                Gazebo/Red
-            </material>
+            <material>Gazebo/Red</material>
         </gazebo>
 
         <joint name="${name}_SupportWheel2base_link" type="continuous">

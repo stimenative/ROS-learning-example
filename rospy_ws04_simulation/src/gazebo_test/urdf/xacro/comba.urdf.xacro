@@ -3,4 +3,6 @@
     <xacro:include filename="base.urdf.xacro"/>
     <xacro:include filename="camera.urdf.xacro"/>
     <xacro:include filename="ladar.urdf.xacro"/>
+    <xacro:include filename="move_controller.urdf.xacro"/>
+    <xacro:include filename="sensor_config.urdf.xacro"/>
 </robot>
