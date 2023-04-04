@@ -1,8 +1,11 @@
 <launch>
+    <arg name="rviz_on" default="false" />
     <!-- 启动rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" />
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <group if="$(arg rviz_on)">
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find navigation_test)/config/amcl_test.rviz" />
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    </group>
 
     <include file="$(find navigation_test)/launch/map_server_launch.launch" />
     <include file="$(find navigation_test)/launch/amcl_test_param.launch" />

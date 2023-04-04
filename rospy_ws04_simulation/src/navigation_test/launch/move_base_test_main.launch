@@ -1,0 +1,22 @@
+<launch>
+    <!-- 设置地图的配置文件 -->
+    <!-- <arg name="map" default="nav.yaml" /> -->
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find navigation_test)/map/$(arg map)"/> -->
+    <!-- 启动AMCL节点 -->
+    <include file="$(find navigation_test)/launch/amcl_test.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find navigation_test)/launch/move_base_param.launch" />
+    <!-- 运行rviz -->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find navigation_test)/config/amcl_test.rviz" /> -->
+
+    <arg name="rviz_on" default="false" />
+    <!-- 启动rviz -->
+    <group if="$(arg rviz_on)">
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find navigation_test)/config/move_base_config.rviz" />
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    </group>
+
+</launch>

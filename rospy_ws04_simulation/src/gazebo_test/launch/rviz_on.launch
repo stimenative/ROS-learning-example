@@ -1,9 +1,20 @@
 <launch>
+    <!-- <arg name="has_config" default="false" />
+    <arg name="pkg_name" default="gazebo_test" />
+    <arg name="file_name" default="car_ladar.rviz" />
+
+    <group if="$(arg has_config)">
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find $(arg pkg_name)/config/$(arg file_name))"/>
+    </group>
+
+    <group unless="$(arg has_config)">
+        <node pkg="rviz" type="rviz" name="rviz"/>
+    </group>  -->
     <!-- 启动 rviz -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find gazebo_test)/config/car_odometry.rviz"/>
 
     <!-- 启动点云时设置，同时修改sensor_config文件中，深度相机kinect的参考坐标系 -->
-    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher" args="0 0 0 -1.57 0 -1.57 /support /support_depth" /> -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher" args="0 0 0 -1.57 0 -1.57 /support /support_depth" />
 
     <!-- 关节以及机器人状态发布节点 -->
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />

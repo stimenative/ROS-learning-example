@@ -12,7 +12,7 @@
         <param name="odom_frame" value="odom" />
         <!-- 地图更新频率 -->
         <param name="map_update_interval" value="5.0" />
-        
+        <!-- 激光探测的最大可用范围(超出此阈值，被截断) -->
         <param name="maxUrange" value="16.0" />
         <param name="sigma" value="0.05" />
         <param name="kernelSize" value="1" />
@@ -42,10 +42,16 @@
         <param name="lasamplestep" value="0.005" />
     </node>
 
-    <node pkg="joint_state_publisher" name="joint_state_publisher" type="joint_state_publisher" />
-    <node pkg="robot_state_publisher" name="robot_state_publisher" type="robot_state_publisher" />
+    <arg name="rviz_on" default="false" />
+    <!-- 启动rviz -->
+    <group if="$(arg rviz_on)">
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find navigation_test)/config/slam_config.rviz" />
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    </group>
 
-    <node pkg="rviz" type="rviz" name="rviz" />
+
+    <!-- <node pkg="rviz" type="rviz" name="rviz" /> -->
     <!-- 可以保存 rviz 配置并后期直接使用-->
     <!--
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find my_nav_sum)/rviz/gmapping.rviz"/>
