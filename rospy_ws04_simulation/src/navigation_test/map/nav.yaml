@@ -1,7 +1,14 @@
 image: /home/gwq/gwq/rospy_ws04_simulation/src/navigation_test/map/nav.pgm
+# 地图刻度尺，单位：米/像素
 resolution: 0.050000
+# 地图的位姿，相对于原点位置(x偏移量，y偏移量，偏航角)
 origin: [-50.000000, -50.000000, 0.000000]
+# 是否取反
 negate: 0
+# 地图中，白色为可通行区域，黑色为障碍物，蓝灰是未知区域
+# 每个像素取值[0.255]，白色255，黑色0
+# 大于占用阈值为障碍物，小于空闲阈值为无物体
+# 占用阈值
 occupied_thresh: 0.65
+# 空闲阈值
 free_thresh: 0.196
-
