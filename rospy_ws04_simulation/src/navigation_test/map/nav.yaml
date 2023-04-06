@@ -1,4 +1,4 @@
-image: /home/gwq/gwq/rospy_ws04_simulation/src/navigation_test/map/nav.pgm
+image: nav.pgm
 # 地图刻度尺，单位：米/像素
 resolution: 0.050000
 # 地图的位姿，相对于原点位置(x偏移量，y偏移量，偏航角)
