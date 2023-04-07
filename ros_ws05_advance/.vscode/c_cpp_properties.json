@@ -8,7 +8,7 @@
       "includePath": [
         "/opt/ros/noetic/include/**",
         "/home/weiqi-gu/ros_ws/ROS-learning-example/rospy_ws04_simulation/devel/include/**",
-        "/home/weiqi-gu/ros_ws/ROS-learning-example/ros_ws05_advance/src/action_test/include/**",
+        "/home/weiqi-gu/ros_ws/ROS-learning-example/ros_ws05_advance/devel/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",
