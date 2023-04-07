@@ -6,32 +6,15 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
-        "/home/gwq/gwq/rospy_ws02_topic/devel/include/**",
         "/opt/ros/noetic/include/**",
-        "/home/gwq/gwq/rospy_ws01/src/helloworld/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/import_test/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/launch_test01/include/**",
-        "/home/gwq/gwq/rospy_ws03_tftest/src/mul_coordinates/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/param_service/include/**",
-        "/home/gwq/gwq/rospy_ws03_tftest/src/ros_bag_test/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/service_client_test/include/**",
-        "/home/gwq/gwq/rospy_ws03_tftest/src/tf_dynamic/include/**",
-        "/home/gwq/gwq/rospy_ws03_tftest/src/tf_test/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/time_test/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/topic_comu/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/turtle_bkgcolor_set/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/turtle_controler/include/**",
-        "/home/gwq/gwq/rospy_ws03_tftest/src/turtle_follow/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/turtle_generate/include/**",
-        "/home/gwq/gwq/rospy_ws02_topic/src/turtle_movement_reader/include/**",
-        "/home/gwq/gwq/rospy_ws01/src/turtle_test/include/**",
-        "/usr/include/**"
+        "/usr/include/**",
+        "/home/weiqi-gu/ros_ws/ROS-learning-example/rospy_ws04_simulation/devel/include/**"
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "gnu11",
-      "cppStandard": "c++14"
+      "cppStandard": "c++17"
     }
   ],
   "version": 4
