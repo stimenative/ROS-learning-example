@@ -1,8 +1,0 @@
-prefix=/home/gwq/gwq/rospy_ws04_simulation/install
-
-Name: gazebo_test
-Description: Description of gazebo_test
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

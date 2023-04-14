@@ -133,7 +133,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/topic_DIYmsg_node.cpp)
+add_executable(diy_pub src/diy_pub.cpp)
+add_executable(diy_sub src/diy_sub.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -143,13 +144,16 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(diy_pub ${PROJECT_NAME}_generate_messages_cpp)
+add_dependencies(diy_sub ${PROJECT_NAME}_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
-
+target_link_libraries(diy_sub
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(diy_pub
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############

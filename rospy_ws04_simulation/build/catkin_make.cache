@@ -1,2 +1,0 @@
-gazebo_test:urdf_basic_test
--DCATKIN_DEVEL_PREFIX=/home/gwq/gwq/rospy_ws04_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/gwq/gwq/rospy_ws04_simulation/install -G Unix Makefiles

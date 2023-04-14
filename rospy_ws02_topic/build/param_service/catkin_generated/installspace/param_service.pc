@@ -1,8 +1,0 @@
-prefix=/home/gwq/gwq/rospy_ws02_topic/install
-
-Name: param_service
-Description: Description of param_service
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

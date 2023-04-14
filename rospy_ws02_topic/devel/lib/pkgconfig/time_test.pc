@@ -1,8 +1,0 @@
-prefix=/home/gwq/gwq/rospy_ws02_topic/devel
-
-Name: time_test
-Description: Description of time_test
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
